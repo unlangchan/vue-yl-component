@@ -7,7 +7,7 @@
 npm install
 ```
 
-### 示例展示
+### 开发调试及示例参看
 ```
 npm run serve
 ```
@@ -15,4 +15,8 @@ npm run serve
 ### 构建生产组件
 ```
 npm build
+```
+### 发布
+```
+npm publish
 ```

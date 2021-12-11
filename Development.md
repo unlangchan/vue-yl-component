@@ -7,7 +7,7 @@ This is the component build description
 npm install
 ```
 
-### Show Demo 
+### Development components Or Show Demo 
 ```
 npm run serve
 ```
@@ -15,4 +15,8 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm build
+```
+### Release
+```
+npm publish
 ```

@@ -4,14 +4,17 @@
 
 本项目为组件库示例样板。
 
-使用示例清参看 ```src/```
+使用示例清参看 [demo][url1]
 
-开发示例请参看 Development-ChineseSimplified.md
+开发示例请参看 [Development-ChineseSimplified.md][url2]
 
 ## License
 [MIT license][license-url]
 
 [![FOSSA Status][fossa-large-image]][fossa-large-url]
+
+[url1]:src/App.vue
+[url2]:Development.md
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE

@@ -4,14 +4,17 @@
 
 This project is a sample template for a component library.
 
-For use examples, see ```src/```
+For use examples, see [demo][url1]
 
-For development examples, see Development.md
+For development examples, see [Development.md][url2]
 
 ## License
 [MIT license][license-url]
 
 [![FOSSA Status][fossa-large-image]][fossa-large-url]
+
+[url1]:src/App.vue
+[url2]:Development.md
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
