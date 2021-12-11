@@ -1,6 +1,6 @@
 {
   "name": "ant-inline-search",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "unlangchan",
   "license": "MIT",
   "description": "基于ant的内联查询下拉",
@@ -12,6 +12,14 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unlangchan/vue-yl-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unlangchan/vue-yl-component/issues"
+  },
+  "homepage": "https://github.com/unlangchan/vue-yl-component/tree/ant-inline-search",
   "dependencies": {
     "ant-design-vue": "^1.7.8",
     "core-js": "^3.6.5",
