@@ -13,8 +13,8 @@ For development examples, see [Development.md][url2]
 
 [![FOSSA Status][fossa-large-image]][fossa-large-url]
 
-[url1]:src/App.vue
-[url2]:Development.md
+[url1]: https://github.com/unlangchan/vue-yl-component/blob/ant-inline-search/src/App.vue
+[url2]: https://github.com/unlangchan/vue-yl-component/blob/ant-inline-search/Development.md
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
