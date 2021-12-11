@@ -9,10 +9,7 @@ npm install
 
 ### 示例展示
 ```
-// 初次运行需执行 
-npm run link-self
-// 每次执行
-npm serve
+npm run serve
 ```
 
 ### 构建生产组件

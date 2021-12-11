@@ -9,10 +9,7 @@ npm install
 
 ### Show Demo 
 ```
-// first 
-npm run link-self
-// every
-npm serve
+npm run serve
 ```
 
 ### Compiles and minifies for production

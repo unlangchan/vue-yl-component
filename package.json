@@ -1,17 +1,19 @@
 {
-  "name": "vue-yl-component",
+  "name": "ant-inline-search",
   "version": "0.1.0",
   "author": "unlangchan",
   "license": "MIT",
-  "main": "dist/vue-yl-component.umd.js",
+  "description": "基于ant的内联查询下拉",
+  "main": "dist/ant-inline-search.umd.js",
   "scripts": {
     "link-self": "npm link --only=production ./",
-    "serve": "vue-cli-service serve ./demo/main.js",
+    "serve": "vue-cli-service serve --inline --progress ./src/main.js",
     "build": "vue-cli-service build --target lib ./src/index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "ant-design-vue": "^1.7.8",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
