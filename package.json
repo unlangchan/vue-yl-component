@@ -1,6 +1,6 @@
 {
   "name": "ant-inline-search",
-  "version": "0.1.3",
+  "version": "0.2.1",
   "author": "unlangchan",
   "license": "MIT",
   "description": "基于ant的内联查询下拉",
