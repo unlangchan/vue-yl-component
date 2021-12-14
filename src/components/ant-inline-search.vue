@@ -1,8 +1,8 @@
 <template>
   <a-dropdown :trigger="['click']" class="ant-inline-search" v-model="visible">
-    <a class="ant-dropdown-link" @click="(e) => e.preventDefault()">
+    <span class="ant-dropdown-link" @click="(e) => e.preventDefault()">
       <slot />
-    </a>
+    </span>
     <a-row :gutter="[0, 16]" slot="overlay" class="ant-inline-search-content">
       <a-spin :spinning="loading">
         <a-row :gutter="[16, 16]">
@@ -80,6 +80,12 @@
               onChange: rowSelectionChange,
               type: type,
             }"
+            :pagination="{
+              pageNum: pagination.pageNum,
+              pageSize: pagination.pageSize,
+              total,
+            }"
+            @change="paginationChange"
           >
           </a-table>
         </a-row>
@@ -120,14 +126,35 @@ export default {
       selectedRows: [],
       loading: false,
       visible: false,
+      pagination: {
+        pageNum: 1,
+        pageSize: 10,
+      },
+      total: 0,
     };
   },
   methods: {
     async searchHandler() {
       this.loading = true;
-      let result = await this.search(this.option.filter);
-      this.dataSource = result;
+      this.pagination.pageNum = 1;
+      await this.query();
       this.loading = false;
+    },
+    async paginationChange() {
+      this.loading = true;
+      await this.query();
+      this.loading = false;
+    },
+    async query() {
+      let filter = this.option.filter;
+      let pagination = {
+        ...this.pagination,
+      };
+      this.selectedRowKeys.splice(0);
+      this.selectedRows.splice(0);
+      let result = await this.search(filter, pagination);
+      this.dataSource = result.dataSource;
+      this.total = result.total;
     },
     confirm() {
       this.$emit("confirm", this.selectedRows);
@@ -173,6 +200,7 @@ export default {
       font-weight: 600;
       line-height: 32px;
       text-align: right;
+      word-break: keep-all;
     }
 
     & > .ant-select,

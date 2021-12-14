@@ -125,11 +125,13 @@ export default {
     log(e) {
       console.log("e :>> ", e);
     },
-    async search(filter) {
-      // let result = await request.get(`xxx`,{params:filter});
-      console.log("filter :>> ", filter);
-      let result = await new Promise((resolve) => {
-        const data = [
+    async search(filter, pagination) {
+      // let { dataSource, total } = await request.get(`xxx`, {
+      //   params: { ...filter, ...pagination },
+      // });
+      console.log("filter, pagination :>> ", filter, pagination);
+      let { dataSource, total } = await new Promise((resolve) => {
+        const dataSource = [
           {
             key: 1,
             colum1: 1,
@@ -163,9 +165,9 @@ export default {
             colum5: 1000,
           },
         ];
-        setTimeout(() => resolve(data), 1000);
+        setTimeout(() => resolve({ dataSource, total: 4 }), 1000);
       });
-      return result;
+      return { dataSource, total };
     },
   },
 };
